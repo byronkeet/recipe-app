@@ -1,15 +1,19 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Button } from 'react-native';
 
-const FavoritesScreen = () => {
+const MealDetailScreen = (props) => {
     return (
-        <View>
+        <View style={styles.screen}>
             <Text>The Meal Detail Screen!</Text>
+            <Button
+                title='Back to Categories'
+                onPress={() => props.navigation.popToTop()} 
+            />
         </View>
     )
 };
 
-export default FavoritesScreen;
+export default MealDetailScreen;
 
 const styles = StyleSheet.create({
     screen: {
